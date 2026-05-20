@@ -209,10 +209,10 @@ a {
 
 .contact-hero {
   min-height: 48vh;
-  background-position: 58% center;
+  background-position: center;
   background-image:
     linear-gradient(90deg, rgba(14, 21, 38, 0.9) 0%, rgba(14, 21, 38, 0.68) 48%, rgba(14, 21, 38, 0.38) 100%),
-    url("images/hero-contact-tools-20260520.jpg");
+    url("images/hero-contact-appliance-20260520.jpg");
 }
 
 .hero-content {
@@ -516,6 +516,10 @@ h1 {
 
 .about-photo img.tech-photo {
   object-position: 42% 42%;
+}
+
+.about-photo img.tech-photo-selfie {
+  object-position: 50% 54%;
 }
 
 .about-note {
