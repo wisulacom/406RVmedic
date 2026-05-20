@@ -514,6 +514,10 @@ h1 {
   box-shadow: var(--shadow);
 }
 
+.about-photo img.tech-photo {
+  object-position: 42% 42%;
+}
+
 .about-note {
   display: grid;
   gap: 0.3rem;
