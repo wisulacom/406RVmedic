@@ -201,9 +201,10 @@ a {
 
 .services-hero {
   min-height: 48vh;
+  background-position: 54% center;
   background-image:
-    linear-gradient(90deg, rgba(14, 21, 38, 0.9) 0%, rgba(14, 21, 38, 0.7) 50%, rgba(14, 21, 38, 0.24) 100%),
-    url("images/electrical-diagnostics.jpg");
+    linear-gradient(90deg, rgba(14, 21, 38, 0.9) 0%, rgba(14, 21, 38, 0.68) 48%, rgba(14, 21, 38, 0.42) 100%),
+    url("images/hero-services-breaker-panel-20260520.jpg");
 }
 
 .contact-hero {
@@ -217,21 +218,27 @@ a {
 .hero-content {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(360px, 0.92fr) minmax(330px, 0.58fr);
-  gap: clamp(2.25rem, 7vw, 6.5rem);
+  grid-template-columns: minmax(360px, 0.86fr) minmax(340px, 0.54fr);
+  gap: clamp(2.5rem, 8vw, 7.5rem);
   align-items: center;
   padding: 4.5rem 0;
 }
 
 .hero-heading {
-  max-width: 660px;
+  max-width: 610px;
 }
 
 .hero-panel {
-  width: min(100%, 500px);
+  width: min(100%, 430px);
   justify-self: end;
-  padding: 1.3rem 0 1.3rem 1.6rem;
-  border-left: 2px solid rgba(255, 255, 255, 0.42);
+  align-self: end;
+  margin-bottom: 0.4rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: var(--radius);
+  background: rgba(9, 16, 33, 0.58);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(8px);
 }
 
 .hero-logo {
@@ -280,14 +287,14 @@ h1 {
 }
 
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 0.8rem;
   margin-top: 1.35rem;
 }
 
 .hero-actions .btn {
-  flex: 1 1 210px;
+  width: 100%;
 }
 
 .hero-meta {
@@ -300,10 +307,11 @@ h1 {
 }
 
 .hero-meta span {
-  padding: 0.52rem 0.75rem;
+  padding: 0.58rem 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--radius);
   background: rgba(10, 16, 31, 0.28);
+  text-align: center;
 }
 
 .band {
@@ -795,11 +803,13 @@ h1 {
   }
 
   .hero-panel {
+    width: min(100%, 620px);
     justify-self: start;
+    align-self: auto;
     max-width: 620px;
-    padding: 1.25rem 0 0;
-    border-left: 0;
-    border-top: 2px solid rgba(255, 255, 255, 0.38);
+    margin-bottom: 0;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .steps-grid {
