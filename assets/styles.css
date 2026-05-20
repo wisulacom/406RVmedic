@@ -188,10 +188,14 @@ a {
   background-size: cover;
 }
 
+.hero .wrap {
+  width: min(1340px, calc(100% - 48px));
+}
+
 .home-hero {
   background-position: 62% center;
   background-image:
-    linear-gradient(90deg, rgba(14, 21, 38, 0.88) 0%, rgba(14, 21, 38, 0.7) 42%, rgba(14, 21, 38, 0.22) 100%),
+    linear-gradient(90deg, rgba(14, 21, 38, 0.86) 0%, rgba(14, 21, 38, 0.64) 42%, rgba(14, 21, 38, 0.5) 100%),
     url("images/hero-home-rv-repair-20260520.jpg");
 }
 
@@ -211,8 +215,23 @@ a {
 }
 
 .hero-content {
-  width: min(680px, 100%);
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(360px, 0.92fr) minmax(330px, 0.58fr);
+  gap: clamp(2.25rem, 7vw, 6.5rem);
+  align-items: center;
   padding: 4.5rem 0;
+}
+
+.hero-heading {
+  max-width: 660px;
+}
+
+.hero-panel {
+  width: min(100%, 500px);
+  justify-self: end;
+  padding: 1.3rem 0 1.3rem 1.6rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.42);
 }
 
 .hero-logo {
@@ -242,10 +261,10 @@ p {
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 650px;
   margin: 0;
-  font-size: clamp(2.55rem, 6.2vw, 5.55rem);
-  line-height: 0.95;
+  font-size: clamp(2.65rem, 5.4vw, 5.15rem);
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
@@ -254,8 +273,8 @@ h1 {
 }
 
 .hero-copy {
-  max-width: 610px;
-  margin: 1.2rem 0 0;
+  max-width: 470px;
+  margin: 0;
   color: rgba(255, 255, 255, 0.9);
   font-size: clamp(1.05rem, 2vw, 1.28rem);
 }
@@ -264,23 +283,27 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 1.6rem;
+  margin-top: 1.35rem;
+}
+
+.hero-actions .btn {
+  flex: 1 1 210px;
 }
 
 .hero-meta {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 0.6rem;
-  margin-top: 1.3rem;
+  margin-top: 1rem;
   color: #fff;
   font-weight: 800;
 }
 
 .hero-meta span {
-  padding: 0.42rem 0.65rem;
+  padding: 0.52rem 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.11);
+  background: rgba(10, 16, 31, 0.28);
 }
 
 .band {
@@ -765,9 +788,18 @@ h1 {
 
   .section-heading,
   .about-grid,
+  .hero-content,
   .contact-strip-inner,
   .two-column {
     grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    justify-self: start;
+    max-width: 620px;
+    padding: 1.25rem 0 0;
+    border-left: 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.38);
   }
 
   .steps-grid {
@@ -777,6 +809,10 @@ h1 {
 
 @media (max-width: 660px) {
   .wrap {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .hero .wrap {
     width: min(100% - 24px, 1120px);
   }
 
